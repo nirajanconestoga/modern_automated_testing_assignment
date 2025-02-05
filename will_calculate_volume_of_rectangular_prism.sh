@@ -6,4 +6,11 @@ HEIGHT=5
 LENGTH=6
 WIDTH=7
 
-(./calculate_volumn.sh $HEIGHT $LENGTH $WIDTH)
+ResultVolume= $(./calculate_volumn.sh $HEIGHT $LENGTH $WIDTH)
+
+if [ $ResultVolume == 210 ]; 
+then
+    echo "Test passed"
+else
+    echo "Test failed"
+fi
